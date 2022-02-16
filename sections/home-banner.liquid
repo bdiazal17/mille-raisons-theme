@@ -1,0 +1,52 @@
+{{ 'home-banner.css' | asset_url | stylesheet_tag }}
+
+<div class="home-banner-container">
+  		<a class="home-banner-container" href="{{ section.settings.image_banner_link_1 }}">
+      <img
+        src="{{ section.settings.image | img_url: '1500x' }}"
+        loading="lazy"
+        alt="{{ section.settings.image.alt | escape }}"
+        class="home-banner-media"/>
+        </a>
+  		<a class="home-banner-container" href="{{ section.settings.image_banner_link_2 }}">
+      <img
+        src="{{ section.settings.image_2 | img_url: '1500x' }}"
+        loading="lazy"
+        alt="{{ section.settings.image.alt | escape }}"
+        class="home-banner-media"/>
+        </a>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Home Banner",
+    "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.image-banner.settings.image.label"
+    },
+	{
+      "type": "url",
+      "id": "image_banner_link_1",
+      "label": "Image Link 1",
+	  "info": "To use button and header blocks, remove links 1 and 2."
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "t:sections.image-banner.settings.image_2.label"
+    },
+	{
+      "type": "url",
+      "id": "image_banner_link_2",
+      "label": "Image Link 2",
+      "info": "To use button and header blocks, remove links 1 and 2."
+	}
+	]
+  }
+{% endschema %}
+
+{% javascript %}
+{% endjavascript %}

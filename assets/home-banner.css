@@ -1,0 +1,19 @@
+.home-banner-container{
+	display: flex;
+  	flex-direction: column;
+}
+
+.home-banner-link{
+	display:flex;
+}
+
+.home-banner-media{
+	width: 100%;
+}
+
+@media screen and (min-width: 750px) {
+  .home-banner-container{
+	display: flex;
+  	flex-direction: row;
+	}
+}
