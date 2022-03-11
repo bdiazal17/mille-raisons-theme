@@ -2148,7 +2148,6 @@ input[type='checkbox'] {
   padding-bottom: 1rem;
 }
 
-@media screen and (min-width: 990px) {
   .header {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -2181,7 +2180,7 @@ input[type='checkbox'] {
   .header:not(.header--middle-left) .header__inline-menu {
     margin-top: 1.05rem;
   }
-}
+
 
 .header *[tabindex='-1']:focus {
   outline: none;
@@ -2230,7 +2229,6 @@ input[type='checkbox'] {
   }
 }
 
-@media screen and (min-width: 990px) {
   .header__heading-link {
     margin-left: -0.75rem;
   }
@@ -2245,7 +2243,7 @@ input[type='checkbox'] {
     justify-self: center;
     text-align: center;
   }
-}
+
 
 /* Header icons */
 .header__icons {
@@ -2462,7 +2460,6 @@ details[open] > .header__icon--menu .icon-hamburger {
 .header__inline-menu {
   margin-left: -1.2rem;
   grid-area: navigation;
-  display: none;
 }
 
 .header--top-center .header__inline-menu,
@@ -2470,7 +2467,6 @@ details[open] > .header__icon--menu .icon-hamburger {
   margin-left: 0;
 }
 
-@media screen and (min-width: 990px) {
   .header__inline-menu {
     display: block;
   }
@@ -2479,14 +2475,10 @@ details[open] > .header__icon--menu .icon-hamburger {
     justify-self: center;
   }
 
-  .header--top-center .header__inline-menu > .list-menu--inline {
-    justify-content: center;
-  }
-
   .header--middle-left .header__inline-menu {
     margin-left: 0;
   }
-}
+
 
 .header__menu {
   padding: 0 1rem;
@@ -2773,3 +2765,32 @@ details-disclosure > details {
     }
   }
 }
+  
+/* CUSTOM CSS */
+  
+ .header__inline-menu {
+  width: 100%;
+   max-width: 750px;
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+  
+  .list-menu{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .header__menu-item{
+        color: rgb(19,19,19);
+        font-weight: 1000;
+    font-size: 20px;
+  }
+  
+  @media screen and (max-width: 396px){
+    .list-menu{
+      justify-content: center;
+      flex-direction: column;
+  }
